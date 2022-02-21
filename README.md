@@ -83,4 +83,14 @@ In your desired html file, type
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
  This syntax is important !!! Inside the `{{ }}` is Python and the double brackets mean to convert the contents to a str
- 
+
+ ## Adding Bootstrap 4
+ Go to getbootstrap.com or https://getbootstrap.com/docs/5.1/getting-started/introduction/
+
+Add the css & JS html tags to `base.html` **below** the blocks
+
+We're going to replace our `static` dir and the reference to it in `index.html` because we're going to be using Bootstrap instead
+
+Remember to be in your virtual environment. If you're not, `source ENV/bin/activate`. If for some reason you need to get out of venv, `deactivate`
+
+Bug -- icons are funky
