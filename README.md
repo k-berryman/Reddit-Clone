@@ -56,3 +56,31 @@ In dir, type
 
 No errors! `exit()`
 Our User table has now been created in our database
+
+##  Templates
+Create dir `templates`
+
+In app.py, edit our route to add `render_template`
+
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+
+Then create `index.html` in `templates`
+
+Now to make our job easier in creating the layout, we'll use template inheritance. Create `base.html` in `templates`
+
+Use Jinja 2 (the template engine that Flask uses) syntax like `{% %}`
+Add `  {% block head %}
+        {% endblock %}`
+
+Go to `index.html` and add `{% extends 'base.html' %}` to implement template inheritance
+
+## Static Content
+Create a dir called `static` and in that create `style.css`
+
+In your desired html file, type
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ This syntax is important !!! Inside the `{{ }}` is Python and the double brackets mean to convert the contents to a str
+ 
