@@ -32,8 +32,8 @@ def signup():
         _email = request.form['email']
         _password = request.form['password']
 
-        print("AAHAHA")
-    print("ahaha")
+        print("POST REQUEST MADE")
+    print("GET REQUEST MADE")
 
     return render_template('signup.html')
 
