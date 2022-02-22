@@ -94,3 +94,8 @@ We're going to replace our `static` dir and the reference to it in `index.html` 
 Remember to be in your virtual environment. If you're not, `source ENV/bin/activate`. If for some reason you need to get out of venv, `deactivate`
 
 Bug -- icons are funky
+
+## Set Up Register Route
+Create `register.html` in `templates`
+Add template inheritance `{% extends 'base.html' %}`
+Create signup route 
